@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
+import Cards from './components/Cards/Cards';
+import Filters from './components/Filters/Filters';
 
 const App = () => (
   <div className="App">
@@ -7,6 +9,22 @@ const App = () => (
       Rick & Morty
       <span className="text-primary"> WiKi</span>
     </h1>
+    <div className="container">
+      <div className="row">
+        <div className="col-3">
+          <Filters />
+        </div>
+        <div className="col-8">
+          <div className="row">
+            <Cards />
+            <Cards />
+            <Cards />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 );
 export default App;
