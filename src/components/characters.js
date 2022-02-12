@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+// import { BrowserRouter as Routes, Route } from 'react-router-dom';
 import { setCharacters } from '../redux/charactersSlice';
 import Character from './char';
 
@@ -15,17 +16,23 @@ export default function Characters() {
 
   return (
     <div className="characters-container">
-      <div className="Buttons">
-        {page > 1
-          ? <button type="button" onClick={() => setPage(page - 1)}>Previous page</button>
-          : ''}
-        <button type="button" onClick={() => setPage(page + 1)}>Next page</button>
-      </div>
+      {page > 1
+        ? <button type="button" onClick={() => setPage(page - 1)}>Previous page</button>
+        : ''}
+      <button type="button" onClick={() => setPage(page + 1)}>Next page</button>
 
       { chars.map(({
-        name, gender, status, image, id,
-      }) => <Character key={id} name={name} gender={gender} status={status} img={image} />) }
-
+        name, gender, status, image, id, location,
+      }) => (
+        <Character
+          key={id}
+          name={name}
+          gender={gender}
+          status={status}
+          img={image}
+          location={location}
+        />
+      )) }
     </div>
   );
 }
