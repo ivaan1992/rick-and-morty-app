@@ -1,8 +1,9 @@
 import React from 'react';
+import Characters from '../characters';
 
 const Cards = () => (
-  <div className="col-4">
-    Cards
+  <div className="card">
+    <Characters />
   </div>
 );
 
