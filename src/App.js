@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import Cards from './components/Cards/Cards';
 import Filters from './components/Filters/Filters';
+import Characters from './components/characters';
 
 const App = () => (
   <div className="App">
@@ -21,7 +22,7 @@ const App = () => (
             <Cards />
           </div>
         </div>
-
+        <Characters />
       </div>
 
     </div>
