@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import './char.css';
 
-
 export default function Character({
   img, name, gender, status, id, location,
 }) {

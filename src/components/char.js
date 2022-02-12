@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import './char.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Character({
-  img, name,
+  img, name, id,
 }) {
   return (
     <div className="body-card">
@@ -12,13 +12,14 @@ export default function Character({
         <h1>{name}</h1>
         {/* <p>{gender}</p>
         <p>{status}</p> */}
-        <button type="button">See details</button>
+        <Link to={`/${id}`}>See details</Link>
       </div>
     </div>
   );
 }
 
 Character.propTypes = {
+  id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   // status: PropTypes.string.isRequired,

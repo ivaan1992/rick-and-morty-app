@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { BrowserRouter as Routes, Route } from 'react-router-dom';
 import { setCharacters } from '../redux/charactersSlice';
 import Character from './char';
 
@@ -31,6 +30,7 @@ export default function Characters() {
           status={status}
           img={image}
           location={location}
+          id={id}
         />
       )) }
     </div>
