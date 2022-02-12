@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 
 export default function Character({
-  img, name, gender, status,
+  img, name, gender, status, location,
 }) {
   return (
     <div className="div">
-      <p>{name}</p>
+      <img src={img} alt={name} srcSet={name} />
+      <h1>{name}</h1>
       <p>{gender}</p>
       <p>{status}</p>
-      <img src={img} alt={name} srcSet={name} />
+      <p>{location}</p>
     </div>
   );
 }
@@ -18,4 +19,5 @@ Character.propTypes = {
   name: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
   gender: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
 };

@@ -15,10 +15,12 @@ export default function Characters() {
 
   return (
     <div className="characters-container">
-      {page > 1
-        ? <button type="button" onClick={() => setPage(page - 1)}>Previous page</button>
-        : ''}
-      <button type="button" onClick={() => setPage(page + 1)}>Next page</button>
+      <div className="Buttons">
+        {page > 1
+          ? <button type="button" onClick={() => setPage(page - 1)}>Previous page</button>
+          : ''}
+        <button type="button" onClick={() => setPage(page + 1)}>Next page</button>
+      </div>
 
       { chars.map(({
         name, gender, status, image, id,
